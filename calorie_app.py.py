@@ -6,7 +6,7 @@ Created on Fri Jan 20 19:08:13 2023
 import pickle
 import streamlit as st
 import numpy as np
-loaded_model = pickle.load(open('C:/Users/RITHVIK/Desktop/calorie/calorie_model.sav', 'rb'))
+loaded_model = pickle.load(open('calorie_model.sav', 'rb'))
 
 st.title("CALORIE BURNT PREDICTION")
 
