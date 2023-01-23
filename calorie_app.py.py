@@ -6,6 +6,7 @@ Created on Fri Jan 20 19:08:13 2023
 import pickle
 import streamlit as st
 import numpy as np
+import database as db
 loaded_model = pickle.load(open('calorie_model.sav', 'rb'))
 
 st.title("CALORIE BURNT PREDICTION")
@@ -38,5 +39,5 @@ prediction(age, gender, height, weight, duration, heart_rate, temparature)
 
 if st.button('Result'):
      pred = prediction(age,gender,height,weight,duration,heart_rate,temparature)
-     
+     db.insert_data(age, gender, height, weight, duration, heart_rate, temparature, pred[0])
      st.success("Number of calories are: %s" %pred[0])
