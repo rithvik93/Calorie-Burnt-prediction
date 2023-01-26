@@ -40,4 +40,4 @@ prediction(age, gender, height, weight, duration, heart_rate, temparature)
 if st.button('Result'):
      pred = prediction(age,gender,height,weight,duration,heart_rate,temparature)
      db.insert_data(age, gender, height, weight, duration, heart_rate, temparature, pred[0])
-     st.success("Number of calories are: %s" %pred[0])
+     st.success("Number of calories Burnt: %s" %pred[0])
