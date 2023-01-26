@@ -4,7 +4,7 @@ Created on Sun Jan 22 19:41:34 2023
 
 @author: RITHVIK
 """
-
+import streamlit as st
 from deta import Deta
 DETA_KEY=st.secrets["DETA_KEY"] 
 # Initialize with a project key
